@@ -4,8 +4,10 @@ import './PostContainer.css';
 function PostContainer(props) {
   return (
     <div className="post-container">
-      {props.username}
-      <img src={props.thumbnailUrl} alt={props.username}></img>
+      <div className="post-header">
+        <img src={props.thumbnailUrl} alt={props.username}></img>
+        {props.username}
+      </div>
       <img src={props.imageUrl} alt={props.username}></img>
       {props.likes}
       {props.timestamp}

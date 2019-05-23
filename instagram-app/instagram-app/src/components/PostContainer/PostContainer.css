@@ -2,8 +2,21 @@
   display: flex;
   flex-direction: column;
   width: 500px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin: 10px;
 }
 
-.post-container img {
-  width: auto;
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+
+.post-header img {
+  width: 50px;
+  margin-right: 25px;
 }
