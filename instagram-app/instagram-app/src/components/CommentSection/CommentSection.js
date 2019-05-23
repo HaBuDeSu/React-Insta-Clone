@@ -4,8 +4,14 @@ import './CommentSection.css';
 function CommentSection(props) {
   return (
     <div>
-      {props.username}
-      {props.text}
+      {props.comments.map(comment => (
+        <div>
+          <p>{comment.username}</p>
+          <p>{comment.text}</p>
+        </div>
+        ))
+      }
+      <input></input>
     </div>
   )
 }

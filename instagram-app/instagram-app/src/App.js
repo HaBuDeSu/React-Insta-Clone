@@ -26,12 +26,9 @@ class App extends Component {
             imageUrl = {post.imageUrl}
             likes = {post.likes}
             timestamp = {post.timestamp}
-            comments = {post.comments.map(comment => (
-              <CommentSection
-                username = {comment.username}
-                text = {comment.text}
+            commentsection = <CommentSection
+                comments = {post.comments}
               />
-            ))}
           />
         ))}
       </div>

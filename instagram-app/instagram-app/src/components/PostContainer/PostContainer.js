@@ -9,7 +9,7 @@ function PostContainer(props) {
       <img src={props.imageUrl} alt={props.username}></img>
       {props.likes}
       {props.timestamp}
-      {props.comments}
+      {props.commentsection}
     </div>
   )
 }
