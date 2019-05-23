@@ -1,0 +1,12 @@
+.comment {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment p {
+  margin-right: 5px;
+}
+
+.comment-username {
+  font-weight: bold;
+}

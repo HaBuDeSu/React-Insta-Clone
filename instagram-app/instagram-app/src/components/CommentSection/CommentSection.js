@@ -5,9 +5,9 @@ function CommentSection(props) {
   return (
     <div>
       {props.comments.map(comment => (
-        <div>
-          <p>{comment.username}</p>
-          <p>{comment.text}</p>
+        <div className="comment">
+          <p className="comment-username">{comment.username}</p>
+          <p className="comment-text">{comment.text}</p>
         </div>
         ))
       }
