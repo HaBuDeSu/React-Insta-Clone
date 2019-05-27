@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
@@ -9,9 +8,16 @@ import dummyData from './dummy-data';
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
-      data: dummyData
+      data: []
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      data: dummyData
+    })
   }
 
   render() {
@@ -26,8 +32,10 @@ class App extends Component {
             imageUrl = {post.imageUrl}
             likes = {post.likes}
             timestamp = {post.timestamp}
+            index = {this.state.data.indexOf(post)}
             commentsection = <CommentSection
                 comments = {post.comments}
+                index = {this.state.data.indexOf(post)}
               />
           />
         ))}
