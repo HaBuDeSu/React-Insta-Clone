@@ -43,7 +43,7 @@ class CommentSection extends React.Component {
             value={this.state.newComment}
             onChange={this.handleChanges}>
           </input>
-          <button className="post-button">Post</button>
+          <button className={this.state.newComment === "" ? "post-button-light" : "post-button"}>Post</button>
         </form>
       </div>
     )

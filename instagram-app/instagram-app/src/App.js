@@ -30,7 +30,8 @@ class App extends Component {
   search = e => {
     e.preventDefault();
     this.setState({
-      data: dummyData.filter(post => post.username === this.state.searchQuery)
+      data: dummyData.filter(post => post.username === this.state.searchQuery),
+      searchQuery: ""
     })
   }
 

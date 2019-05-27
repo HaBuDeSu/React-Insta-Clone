@@ -15,9 +15,21 @@
 .comment-input {
   width: 92%;
   border: none;
+  margin-top: 10px;
+}
+
+.comment-input:focus {
+  outline: none;
 }
 
 .post-button {
+  background-color: white;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.post-button-light {
   background-color: white;
   border: none;
   color: #cce6ff;
