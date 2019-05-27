@@ -10,13 +10,27 @@ class App extends Component {
     super();
 
     this.state = {
-      data: []
+      data: [],
+      searchQuery: ""
     }
   }
 
   componentDidMount() {
     this.setState({
       data: dummyData
+    })
+  }
+
+  changeHandler = e => {
+    this.setState({
+      searchQuery: e.target.value
+    })
+  }
+
+  search = e => {
+    e.preventDefault();
+    this.setState({
+      data: dummyData.filter(post => post.username === this.state.searchQuery)
     })
   }
 
@@ -27,7 +41,12 @@ class App extends Component {
           <div className="header-logo">
             <h1>Instaclone</h1>
           </div>
-          <SearchBar />
+          <SearchBar
+            posts = {this.state.data}
+            search = {this.search}
+            searchQuery= {this.state.searchQuery}
+            changeHandler = {this.changeHandler}
+          />
           <div className="header-icons">
           </div>
         </div>
