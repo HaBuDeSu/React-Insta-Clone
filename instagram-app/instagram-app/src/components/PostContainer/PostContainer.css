@@ -34,6 +34,10 @@
   margin-right: 10px;
 }
 
+.like-button {
+  cursor: pointer;
+}
+
 .icons-right img {
   margin-left: 10px;
 }
