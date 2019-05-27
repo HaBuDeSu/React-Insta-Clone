@@ -25,7 +25,8 @@
 .post-button {
   background-color: white;
   border: none;
-  color: blue;
+  color: #0066FF;
+  font-weight: bold;
   cursor: pointer;
 }
 

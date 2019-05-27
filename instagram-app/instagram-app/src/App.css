@@ -53,16 +53,27 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #F5F5F5;
 }
 
+.app-header-container {
+	width: 100%;
+	background-color: white;
+}
 .app-header {
-  width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
-  padding: 20px;
+	align-items: center;
+	padding: 20px;
+}
+
+.header-icons img{
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
 }
 
 h1 {
