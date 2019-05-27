@@ -4,7 +4,7 @@ import './SearchBar.css';
 function SearchBar() {
   return (
     <div>
-      <input></input>
+      <input className="search-input" placeholder="Search"></input>
     </div>
   )
 }

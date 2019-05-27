@@ -1,6 +1,7 @@
 .comment {
   display: flex;
   flex-direction: row;
+  margin-bottom: 5px;
 }
 
 .comment p {
@@ -9,4 +10,15 @@
 
 .comment-username {
   font-weight: bold;
+}
+
+.comment-input {
+  width: 92%;
+  border: none;
+}
+
+.post-button {
+  background-color: white;
+  border: none;
+  color: #cce6ff;
 }

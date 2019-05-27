@@ -20,9 +20,9 @@ class CommentSection extends React.Component {
   addNewComment = e => {
     e.preventDefault();
     this.setState({
-      comments: [...this.state.comments, {username: "Me", text: this.state.newComment}]
+      comments: [...this.state.comments, {username: "Me", text: this.state.newComment}],
+      newComment: ""
     })
-    console.log(this.state.comments);
   }
 
   render () {
@@ -35,11 +35,15 @@ class CommentSection extends React.Component {
           </div>
           ))
         }
-        <form className="comment-input" onSubmit={this.addNewComment}>
+        <form onSubmit={this.addNewComment}>
           <input
+            className="comment-input"
+            placeholder="Add a comment..."
             type="text"
             value={this.state.newComment}
-            onChange={this.handleChanges}></input>
+            onChange={this.handleChanges}>
+          </input>
+          <button className="post-button">Post</button>
         </form>
       </div>
     )

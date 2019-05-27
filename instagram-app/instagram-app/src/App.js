@@ -23,19 +23,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Instaclone</h1>
-        <SearchBar />
+        <div className="app-header">
+          <div className="header-logo">
+            <h1>Instaclone</h1>
+          </div>
+          <SearchBar />
+          <div className="header-icons">
+          </div>
+        </div>
         {this.state.data.map(post => (
           <PostContainer
-            username = {post.username}
-            thumbnailUrl = {post.thumbnailUrl}
-            imageUrl = {post.imageUrl}
-            likes = {post.likes}
-            timestamp = {post.timestamp}
-            index = {this.state.data.indexOf(post)}
+            post = {post}
             commentsection = <CommentSection
                 comments = {post.comments}
-                index = {this.state.data.indexOf(post)}
               />
           />
         ))}
