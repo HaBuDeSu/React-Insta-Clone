@@ -1,11 +1,9 @@
 import React from 'react';
 
-const withAuthenticate = Component =>
+const withAuthenticate = App =>
   class extends React.Component {
     render() {
-      return (
-        <Component />
-      )
+      return <App />
     }
   };
 
