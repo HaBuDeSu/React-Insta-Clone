@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-import CommentSection from './components/CommentSection/CommentSection';
+import PostsPage from './components/PostContainer/PostsPage';
 import dummyData from './dummy-data';
 
 class App extends Component {
@@ -38,32 +36,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="app-header-container">
-          <div className="app-header">
-            <div className="header-logo">
-              <h1>Instaclone</h1>
-            </div>
-            <SearchBar
-              posts = {this.state.data}
-              search = {this.search}
-              searchQuery= {this.state.searchQuery}
-              changeHandler = {this.changeHandler}
-            />
-            <div className="header-icons">
-              <img src="https://img.icons8.com/ios/50/000000/compass.png" className="compass-icon"></img>
-              <img src="https://img.icons8.com/ios/50/000000/alarm.png" className="notification-icon"></img>
-              <img src="https://img.icons8.com/ios/50/000000/user.png" className="profile-icon"></img>
-            </div>
-          </div>
-        </div>
-        {this.state.data.map(post => (
-          <PostContainer
-            post = {post}
-            commentsection = <CommentSection
-                comments = {post.comments}
-              />
-          />
-        ))}
+        <PostsPage
+          data = {this.state.data}
+          searchQuery = {this.state.searchQuery}
+          changeHandler = {this.changeHandler}
+          search = {this.search}
+        />
       </div>
     );
   }

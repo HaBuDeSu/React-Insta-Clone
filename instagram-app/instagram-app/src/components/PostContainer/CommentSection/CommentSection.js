@@ -22,14 +22,14 @@ class CommentSection extends React.Component {
     this.setState({
       comments: [...this.state.comments, {username: "Me", text: this.state.newComment}],
       newComment: ""
-    })
+    });
   }
 
   render () {
     return (
       <div>
         {this.state.comments.map(comment => (
-          <div className="comment">
+          <div className="comment" key={comment.text}>
             <p className="comment-username">{comment.username}</p>
             <p className="comment-text">{comment.text}</p>
           </div>
