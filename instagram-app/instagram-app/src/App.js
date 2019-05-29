@@ -4,6 +4,8 @@ import PostsPage from './components/PostContainer/PostsPage';
 import withAuthenticate from './authentication/withAuthenticate'
 import dummyData from './dummy-data';
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)
+
 class App extends React.Component {
   constructor() {
     super();
@@ -37,12 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostsPage
-          data = {this.state.data}
-          searchQuery = {this.state.searchQuery}
-          changeHandler = {this.changeHandler}
-          search = {this.search}
-        />
+        {ComponentFromWithAuthenticate}
       </div>
     );
   }
