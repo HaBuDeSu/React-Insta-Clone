@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import PostsPage from './components/PostContainer/PostsPage';
+import withAuthenticate from './authentication/withAuthenticate'
 import dummyData from './dummy-data';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
 

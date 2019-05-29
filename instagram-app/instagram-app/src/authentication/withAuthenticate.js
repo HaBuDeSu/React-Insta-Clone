@@ -1,15 +1,12 @@
 import React from 'react';
 
-class WithAuthenticate extends React.Component {
-  constructor() {
-    super();
-  }
+const withAuthenticate = Component =>
+  class extends React.Component {
+    render() {
+      return (
+        <Component />
+      )
+    }
+  };
 
-  render() {
-    return(
-      
-    )
-  }
-}
-
-export default WithAuthenticate;
+export default withAuthenticate;
