@@ -34,7 +34,12 @@ class PostsPage extends React.Component {
       searchQuery: ""
     })
   }
-  
+
+  logout = () => {
+    localStorage.setItem("username", null);
+    window.location.reload();
+  }
+
   render() {
     return(
       <div className="posts-page">
@@ -53,6 +58,7 @@ class PostsPage extends React.Component {
               <img src="https://img.icons8.com/ios/50/000000/compass.png" className="compass-icon"></img>
               <img src="https://img.icons8.com/ios/50/000000/alarm.png" className="notification-icon"></img>
               <img src="https://img.icons8.com/ios/50/000000/user.png" className="profile-icon"></img>
+              <span id="logout-button" onClick={this.logout}>Logout</span>
             </div>
           </div>
         </div>
