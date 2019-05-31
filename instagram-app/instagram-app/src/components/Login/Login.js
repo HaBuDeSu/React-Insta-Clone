@@ -1,16 +1,16 @@
 import React from 'react';
 import './Login.css';
 
-function login = (username) => {
-  localStorage.setItem("username", username)
+function login() {
+  localStorage.setItem("username", document.getElementById('username').value)
 }
 
 const Login = () => {
   return(
-    <div>
-      <form>
-        <input className="username-input" placeholder="Username"></input>
-        <input className="password-input" placeholder="Password"></input>
+    <div className="login-form">
+      <form onSubmit={login}>
+        <input className="username-input" placeholder="Username" id="username"></input>
+        <input className="password-input" placeholder="Password" id="password"></input>
         <button className="login-button">Login</button>
       </form>
     </div>
